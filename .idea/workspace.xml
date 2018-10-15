@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a21efb19-cdf9-4ceb-a44b-5c6d55333534" name="Default Changelist" comment="">
+    <list default="true" id="a21efb19-cdf9-4ceb-a44b-5c6d55333534" name="Default Changelist" comment="会议管理系统">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,7 +78,7 @@
         <counts>
           <entry key="fxml" value="3" />
           <entry key="html" value="2099" />
-          <entry key="java" value="2992" />
+          <entry key="java" value="3008" />
           <entry key="js" value="1981" />
           <entry key="txt" value="6" />
           <entry key="xml" value="1003" />
@@ -87,7 +88,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2099" />
-          <entry key="JAVA" value="2992" />
+          <entry key="JAVA" value="3008" />
           <entry key="JavaScript" value="1981" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="SQL" value="43" />
@@ -99,11 +100,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="228">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/会议配置.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="601" column="14" selection-start-line="601" selection-start-column="14" selection-end-line="601" selection-end-column="14" />
+            <state relative-caret-position="101">
+              <caret line="587" column="6" lean-forward="true" selection-start-line="587" selection-start-column="6" selection-end-line="587" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -269,7 +273,6 @@
         <option value="$PROJECT_DIR$/../../code/springboot-fastdfs-demo-master/src/test/java/com/gitnavi/springboot/springbootsimpledemo/service/SysUserServiceTest.java" />
         <option value="$PROJECT_DIR$/../../code/springboot-fastdfs-demo-master/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/meeting/m2/config/DateConverterConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meeting/m2/config/FdfsConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MeetingMapper.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -286,6 +289,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/meeting/m2/controller/MeetingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meeting/m2/pojo/MeetingNotes.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/会议配置.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java" />
       </list>
     </option>
   </component>
@@ -374,7 +378,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539600210910" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539601312461" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -507,7 +511,7 @@
       <workItem from="1539580314452" duration="1241000" />
       <workItem from="1539581645751" duration="9082000" />
       <workItem from="1539599479929" duration="25000" />
-      <workItem from="1539599564190" duration="598000" />
+      <workItem from="1539599564190" duration="1585000" />
     </task>
     <task id="LOCAL-00001" summary="会议管理系统">
       <created>1539526303425</created>
@@ -544,11 +548,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539599929453</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="会议管理系统">
+      <created>1539601130351</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1539601130351</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100850000" />
+    <option name="totallyTimeSpent" value="101837000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -561,8 +572,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4957265" visible="true" weight="0.23391421" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4957265" visible="true" weight="0.18364611" />
       <window_info id="Structure" order="1" sideWeight="0.50427353" side_tool="true" weight="0.20911528" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -921,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/meeting/m2/controller/MeetingController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1121">
@@ -991,8 +996,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/会议配置.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="601" column="14" selection-start-line="601" selection-start-column="14" selection-end-line="601" selection-end-column="14" />
+        <state relative-caret-position="101">
+          <caret line="587" column="6" lean-forward="true" selection-start-line="587" selection-start-column="6" selection-end-line="587" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
