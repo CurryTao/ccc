@@ -1,5 +1,6 @@
 package com.meeting.m2.controller;
 
+import com.meeting.m2.service.MeetingService;
 import com.meeting.m2.util.FastDFSClientWrapper;
 import com.meeting.m2.util.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,17 +16,34 @@ import java.io.IOException;
 public class UploadController {
 
     @Autowired
+    private MeetingService meetingService;
+
+    @Autowired
     private FastDFSClientWrapper fastDFSClientWrapper;
 
-    @RequestMapping("/upload")
-    public PageResult fdfsUpload(@RequestBody MultipartFile file) {
-        if (file.isEmpty()) {
+    @RequestMapping("/uploadMeeingPoster")
+    public PageResult fdfsUpload(@RequestBody MultipartFile uploadMeeingPoster) {
+        if (uploadMeeingPoster.isEmpty()) {
             return PageResult.error(405, "图片不能为空");
         }
         try {
-            String fileUrl = fastDFSClientWrapper.uploadFile(file);
+            String fileUrl = fastDFSClientWrapper.uploadFile(uploadMeeingPoster);
             return PageResult.success(fileUrl);
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
+            return PageResult.error(500, "图片上传失败");
+        }
+    }
+
+    @RequestMapping("/uploadMeeingShedule")
+    public PageResult uploadMeeingShedule(@RequestBody MultipartFile meeingSheduleList, long mid) {
+        if (meeingSheduleList.isEmpty()) {
+            return PageResult.error(405, "图片不能为空");
+        }
+        try {
+            meetingService.importMeetingShedule(mid, meeingSheduleList.getOriginalFilename(), meeingSheduleList);
+            return PageResult.success(null);
+        } catch (Exception e) {
             e.printStackTrace();
             return PageResult.error(500, "图片上传失败");
         }

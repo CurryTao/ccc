@@ -39,11 +39,11 @@
         from tb_meetings
         <where>
             status in (1,2,3)
-            <if test="starttime != null and starttime != ''">
-                and starttime &lt; #{starttime}
+            <if test="starttime != null ">
+                and starttime &gt; #{starttime}
             </if>
-            <if test="endtime != null and endtime != ''">
-                AND endtime &gt; #{endtime}
+            <if test="endtime != null ">
+                AND endtime &lt; #{endtime}
             </if>
             <if test="status != null and status != ''">
                 AND status = #{status}

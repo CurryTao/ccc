@@ -9,5 +9,8 @@
         <module name="mangerOfCmeetingsSystem" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springboot-fastdfs-demo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

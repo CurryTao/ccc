@@ -1,13 +1,16 @@
 package com.meeting.m2.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class FdfsConfig {
 
-    private String resHost = "192.168.9.133";
+    @Value("${fdfs.resHost}")
+    private String resHost;
 
-    private String storagePort = "80";
+    @Value("${fdfs.storagePort}")
+    private String storagePort;
 
     public String getResHost() {
         return resHost;

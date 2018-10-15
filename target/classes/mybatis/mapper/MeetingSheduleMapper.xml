@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.meeting.m2.dao.MeetingSheduleMapper" >
-  <resultMap id="BaseResultMap" type="com.meeting.m2.pojo.MeetingShedule" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="mid" property="mid" jdbcType="BIGINT" />
-    <result column="lssues" property="lssues" jdbcType="VARCHAR" />
-    <result column="speaker" property="speaker" jdbcType="VARCHAR" />
-    <result column="starttime" property="starttime" jdbcType="TIMESTAMP" />
-    <result column="endtime" property="endtime" jdbcType="TIMESTAMP" />
-    <result column="content" property="content" jdbcType="VARCHAR" />
-    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
-    <result column="creatby" property="creatby" jdbcType="VARCHAR" />
-    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
-    <result column="updateby" property="updateby" jdbcType="VARCHAR" />
-  </resultMap>
-  <sql id="Base_Column_List" >
+<mapper namespace="com.meeting.m2.dao.MeetingSheduleMapper">
+    <resultMap id="BaseResultMap" type="com.meeting.m2.pojo.MeetingShedule">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="mid" property="mid" jdbcType="BIGINT"/>
+        <result column="lssues" property="lssues" jdbcType="VARCHAR"/>
+        <result column="speaker" property="speaker" jdbcType="VARCHAR"/>
+        <result column="starttime" property="starttime" jdbcType="TIMESTAMP"/>
+        <result column="endtime" property="endtime" jdbcType="TIMESTAMP"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="createtime" property="createtime" jdbcType="TIMESTAMP"/>
+        <result column="creatby" property="creatby" jdbcType="VARCHAR"/>
+        <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
+        <result column="updateby" property="updateby" jdbcType="VARCHAR"/>
+        <result column="sheduletemplatename" property="sheduletemplatename" jdbcType="VARCHAR"/>
+        <result column="sheduletemplateurl" property="sheduletemplateurl" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     id, mid, lssues, speaker, starttime, endtime, content, createtime, creatby, updatetime, 
-    updateby
+    updateby, sheduletemplatename, sheduletemplateurl
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select 
-    <include refid="Base_Column_List" />
-    from tb_meeting_shedule
-    where id = #{id,jdbcType=BIGINT}
-  </select>
-  <select id="getMeetingList" resultMap="BaseResultMap" parameterType="com.meeting.m2.pojo.MeetingShedule" >
-    select
-    <include refid="Base_Column_List" />
-    from tb_meeting_shedule
-    where mid=#{mid}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_meeting_shedule
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="getMeetingList" resultMap="BaseResultMap" parameterType="com.meeting.m2.pojo.MeetingShedule">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_meeting_shedule
+        where mid=#{mid}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from tb_meeting_shedule
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.meeting.m2.pojo.MeetingShedule" >
+    <insert id="insert" parameterType="com.meeting.m2.pojo.MeetingShedule">
     insert into tb_meeting_shedule (id, mid, lssues, 
       speaker, starttime, endtime, 
       content, createtime, creatby, 
@@ -46,134 +48,134 @@
       #{updatetime,jdbcType=TIMESTAMP}, #{updateby,jdbcType=VARCHAR}, #{sheduletemplatename,jdbcType=VARCHAR},
       #{sheduletemplateurl,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.meeting.m2.pojo.MeetingShedule" >
-    insert into tb_meeting_shedule
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="mid != null" >
-        mid,
-      </if>
-      <if test="lssues != null" >
-        lssues,
-      </if>
-      <if test="speaker != null" >
-        speaker,
-      </if>
-      <if test="starttime != null" >
-        starttime,
-      </if>
-      <if test="endtime != null" >
-        endtime,
-      </if>
-      <if test="content != null" >
-        content,
-      </if>
-      <if test="createtime != null" >
-        createtime,
-      </if>
-      <if test="creatby != null" >
-        creatby,
-      </if>
-      <if test="updatetime != null" >
-        updatetime,
-      </if>
-      <if test="updateby != null" >
-        updateby,
-      </if>
-      <if test="sheduletemplatename != null" >
-        sheduletemplatename,
-      </if>
-      <if test="sheduletemplateurl != null" >
-        sheduletemplateurl,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="mid != null" >
-        #{mid,jdbcType=BIGINT},
-      </if>
-      <if test="lssues != null" >
-        #{lssues,jdbcType=VARCHAR},
-      </if>
-      <if test="speaker != null" >
-        #{speaker,jdbcType=VARCHAR},
-      </if>
-      <if test="starttime != null" >
-        #{starttime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="endtime != null" >
-        #{endtime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="content != null" >
-        #{content,jdbcType=VARCHAR},
-      </if>
-      <if test="createtime != null" >
-        #{createtime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="creatby != null" >
-        #{creatby,jdbcType=VARCHAR},
-      </if>
-      <if test="updatetime != null" >
-        #{updatetime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateby != null" >
-        #{updateby,jdbcType=VARCHAR},
-      </if>
-      <if test="sheduletemplatename != null" >
-        #{sheduletemplatename,jdbcType=VARCHAR},
-      </if>
-      <if test="sheduletemplateurl != null" >
-        #{sheduletemplateurl,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.meeting.m2.pojo.MeetingShedule" >
-    update tb_meeting_shedule
-    <set >
-      <if test="mid != null" >
-        mid = #{mid,jdbcType=BIGINT},
-      </if>
-      <if test="lssues != null" >
-        lssues = #{lssues,jdbcType=VARCHAR},
-      </if>
-      <if test="speaker != null" >
-        speaker = #{speaker,jdbcType=VARCHAR},
-      </if>
-      <if test="starttime != null" >
-        starttime = #{starttime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="endtime != null" >
-        endtime = #{endtime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="content != null" >
-        content = #{content,jdbcType=VARCHAR},
-      </if>
-      <if test="createtime != null" >
-        createtime = #{createtime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="creatby != null" >
-        creatby = #{creatby,jdbcType=VARCHAR},
-      </if>
-      <if test="updatetime != null" >
-        updatetime = #{updatetime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateby != null" >
-        updateby = #{updateby,jdbcType=VARCHAR},
-      </if>
-      <if test="sheduletemplatename != null" >
-        sheduletemplatename = #{sheduletemplatename,jdbcType=VARCHAR},
-      </if>
-      <if test="sheduletemplateurl != null" >
-        sheduletemplateurl = #{sheduletemplateurl,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.meeting.m2.pojo.MeetingShedule" >
+    <insert id="insertSelective" parameterType="com.meeting.m2.pojo.MeetingShedule">
+        insert into tb_meeting_shedule
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="mid != null">
+                mid,
+            </if>
+            <if test="lssues != null">
+                lssues,
+            </if>
+            <if test="speaker != null">
+                speaker,
+            </if>
+            <if test="starttime != null">
+                starttime,
+            </if>
+            <if test="endtime != null">
+                endtime,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="createtime != null">
+                createtime,
+            </if>
+            <if test="creatby != null">
+                creatby,
+            </if>
+            <if test="updatetime != null">
+                updatetime,
+            </if>
+            <if test="updateby != null">
+                updateby,
+            </if>
+            <if test="sheduletemplatename != null">
+                sheduletemplatename,
+            </if>
+            <if test="sheduletemplateurl != null">
+                sheduletemplateurl,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="mid != null">
+                #{mid,jdbcType=BIGINT},
+            </if>
+            <if test="lssues != null">
+                #{lssues,jdbcType=VARCHAR},
+            </if>
+            <if test="speaker != null">
+                #{speaker,jdbcType=VARCHAR},
+            </if>
+            <if test="starttime != null">
+                #{starttime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endtime != null">
+                #{endtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creatby != null">
+                #{creatby,jdbcType=VARCHAR},
+            </if>
+            <if test="updatetime != null">
+                #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateby != null">
+                #{updateby,jdbcType=VARCHAR},
+            </if>
+            <if test="sheduletemplatename != null">
+                #{sheduletemplatename,jdbcType=VARCHAR},
+            </if>
+            <if test="sheduletemplateurl != null">
+                #{sheduletemplateurl,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.meeting.m2.pojo.MeetingShedule">
+        update tb_meeting_shedule
+        <set>
+            <if test="mid != null">
+                mid = #{mid,jdbcType=BIGINT},
+            </if>
+            <if test="lssues != null">
+                lssues = #{lssues,jdbcType=VARCHAR},
+            </if>
+            <if test="speaker != null">
+                speaker = #{speaker,jdbcType=VARCHAR},
+            </if>
+            <if test="starttime != null">
+                starttime = #{starttime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endtime != null">
+                endtime = #{endtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                createtime = #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creatby != null">
+                creatby = #{creatby,jdbcType=VARCHAR},
+            </if>
+            <if test="updatetime != null">
+                updatetime = #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateby != null">
+                updateby = #{updateby,jdbcType=VARCHAR},
+            </if>
+            <if test="sheduletemplatename != null">
+                sheduletemplatename = #{sheduletemplatename,jdbcType=VARCHAR},
+            </if>
+            <if test="sheduletemplateurl != null">
+                sheduletemplateurl = #{sheduletemplateurl,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.meeting.m2.pojo.MeetingShedule">
     update tb_meeting_shedule
     set mid = #{mid,jdbcType=BIGINT},
       lssues = #{lssues,jdbcType=VARCHAR},

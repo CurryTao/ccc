@@ -10,7 +10,7 @@
         <result column="notesfileurl" property="notesfileurl" jdbcType="VARCHAR"/>
     </resultMap>
     <sql id="Base_Column_List">
-    id, mid, trafficontes, meetingcontes
+    id, mid, trafficontes, meetingcontes, notesfilename, notesfileurl
   </sql>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
         select

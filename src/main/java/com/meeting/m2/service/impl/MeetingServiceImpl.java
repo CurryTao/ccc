@@ -146,6 +146,7 @@ public class MeetingServiceImpl implements MeetingService {
                 if (lessus == null || lessus.isEmpty()) {
                     throw new RuntimeException("导入失败(第" + (r + 1) + "行,议程议题未填写)");
                 }
+
                 if (row.getCell(1).getCellType() != 1) {
                     throw new RuntimeException("导入失败(第" + (r + 1) + "行,演讲人请设为文本格式)");
                 }
@@ -175,10 +176,10 @@ public class MeetingServiceImpl implements MeetingService {
                     throw new RuntimeException("导入失败(第" + (r + 1) + "行,演讲内容未填写)");
                 }
 
-
                 //TODO 传入对象值
                 meetingShedule.setMid(meetingId);
                 meetingShedule.setLssues(lessus);
+                meetingShedule.setSpeaker(speaker);
                 meetingShedule.setStarttime(starttime);
                 meetingShedule.setEndtime(endtime);
                 meetingShedule.setContent(content);

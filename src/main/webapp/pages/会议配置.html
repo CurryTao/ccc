@@ -146,7 +146,7 @@
                                 <td class="text-center">{{note.id}}</td>
                                 <td class="">{{note.trafficontes}}</td>
                                 <td class="">{{note.meetingcontes}}</td>
-                                <td class="text-center"><a href="{{notesfileurl}}">{{notesfilename}}</a></td>
+                                <td class="text-center"><a href="{{note.notesfileurl}}">{{note.notesfilename}}</a></td>
                             </tr>
                             </tbody>
                         </table>
@@ -203,15 +203,6 @@
                                     </button>
                                 </div>
                             </div>
-                            <ul class="pagination pull-right">
-                                <li><a href="#">上一页</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                            </ul>
                         </div>
                     </div>
                     <div class="panel panel-default epanel hidden" datainfo="select_d3">
@@ -253,17 +244,19 @@
                                     </button>
                                 </div>
                                 <div class="btn-group btn-group-sm">
-                                    <a type="button" href="#" class="btn btn-default" ng-click="templateDowload()"><span
+                                    <a type="button"
+                                       href="http://192.168.9.133:80/group1/M00/00/00/wKgJhVvEMbmARXxdAAArUJRGJaE49.xlsx"
+                                       class="btn btn-default" ng-click="templateDowload()"><span
                                             class="icon "></span>
                                         模板下载</a>
                                 </div>
                                 <div class="btn-group btn-group-sm">
+                                    <input type="file" id="meetingSheduleListFile">
                                     <a type="button" href="#" class="btn btn-default" ng-click="templateImport()"><span
                                             class="icon "></span>
-                                        导入文件</a>
+                                        将文件内容导入</a>
                                 </div>
                             </div>
-                            <tm-Pagination conf="myPage"></tm-Pagination>
                         </div>
                     </div>
                     <div class="panel panel-default epanel hidden" datainfo="select_d4">
@@ -317,15 +310,6 @@
                                         导入文件</a>
                                 </div>
                             </div>
-                            <ul class="pagination pull-right">
-                                <li><a href="#">上一页</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                            </ul>
                         </div>
                     </div>
                     <div class="panel panel-default epanel hidden" datainfo="select_d5">
@@ -377,15 +361,6 @@
                                         导入文件</a>
                                 </div>
                             </div>
-                            <ul class="pagination pull-right">
-                                <li><a href="#">上一页</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                            </ul>
                         </div>
                     </div>
                     <div class="panel panel-default epanel hidden" datainfo="select_d6">
@@ -431,15 +406,6 @@
                                         导入文件</a>
                                 </div>
                             </div>
-                            <ul class="pagination pull-right">
-                                <li><a href="#">上一页</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                            </ul>
                         </div>
                     </div>
                     <div class="panel panel-default epanel hidden" datainfo="select_d7">
@@ -493,15 +459,6 @@
                                         导入文件</a>
                                 </div>
                             </div>
-                            <ul class="pagination pull-right">
-                                <li><a href="#">上一页</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                            </ul>
                         </div>
                     </div>
                     <div class="panel panel-default epanel hidden" datainfo="select_d8">
@@ -551,15 +508,6 @@
                                     </button>
                                 </div>
                             </div>
-                            <ul class="pagination pull-right">
-                                <li><a href="#">上一页</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -573,26 +521,32 @@
 
 <!---->
 <div id="select_d1_addBox" class="hidden">
-    <form class="form-horizontal addForm" role="form">
+    <form class="form-horizontal addForm" role="form" action="../meeting/addMeetingNote" method="post"
+          enctype="multipart/form-data">
         <div class="form-group">
             <label for="" class="col-xs-2 control-label">交通信息</label>
             <div class="col-xs-6">
-                <input ng-model="meetingNotes.trafficontes"></input>
+                <textarea class="form-control input-sm" rows="5" name="" placeholder="请输入会议须知"></textarea>
                 <p class="help-inline text-muted">长度不低于2个字符，不多于100个字符</p>
             </div>
         </div>
         <div class="form-group">
             <label for="" class="col-xs-2 control-label">会议须知</label>
             <div class="col-xs-6">
-                <input ng-model="meetingNotes.meetingcontes">
+                <textarea class="form-control input-sm" rows="5" name="" placeholder="请输入会议须知"></textarea>
                 <p class="help-inline text-muted">长度不低于2个字符，不多于100个字符</p>
             </div>
         </div>
         <div class="form-group">
             <label class="col-xs-2 control-label" for="">会议须知上传</label>
-            <div class="col-xs-6 liulan">
-                <input type="file">
+            <div class="col-xs-6">
+                <input type="file" name="file">
                 <p class="help-inline text-muted">暂时只支持上传docx、pdf、ppt和doc格式文档</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-control input-sm" align="left">
+                <input type="submit" name="添加信息">
             </div>
         </div>
     </form>
@@ -633,41 +587,46 @@
     </form>
 </div>
 <div id="select_d3_addBox" class="hidden">
-    <form class="form-horizontal addForm" role="form">
+    <form class="form-horizontal addForm" role="form" action="../meeting/addMeetingShedule" method="post">
         <div class="form-group">
             <label for="" class="col-xs-2 control-label">议程议题</label>
             <div class="col-xs-6">
                 <input type="text" class="form-control input-sm" id="" placeholder="议程议题"
-                       ng-model="meetingShedule.lssues">
+                       name="lssues">
             </div>
         </div>
         <div class="form-group">
             <label for="" class="col-xs-2 control-label">演讲人</label>
             <div class="col-xs-6">
-                <input type="text" class="form-control input-sm" id="" placeholder="演讲人"
-                       ng-model="meetingShedule.speaker">
+                <input type="text" class="form-control input-sm" placeholder="演讲人"
+                       name="speaker">
             </div>
         </div>
         <div class="form-group">
             <label for="" class="col-xs-2 control-label">开始时间</label>
             <div class="col-xs-6">
                 <input type="text" class="form-control input-sm" id="" placeholder="开始时间"
-                       ng-model="meetingShedule.starttime">
+                       name="starttime">
             </div>
         </div>
         <div class="form-group">
             <label for="" class="col-xs-2 control-label">结束时间</label>
             <div class="col-xs-6">
                 <input type="text" class="form-control input-sm" id="" placeholder="结束时间"
-                       ng-model="meetingShedule.endtime">
+                       name="endtime">
             </div>
         </div>
         <div class="form-group">
             <label for="" class="col-xs-2 control-label">演讲内容</label>
             <div class="col-xs-6">
                 <textarea class="form-control input-sm" rows="5" id="" placeholder="请输入演讲内容"
-                          ng-model="meetingShedule.content"></textarea>
+                          name="content"></textarea>
             </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-6">
+            </div>
+            <input type="submit" name="确认">
         </div>
     </form>
 </div>
@@ -798,18 +757,7 @@
                 'type': false,
                 'overlay_close': false,
                 'overlay_opacity': 0.75,
-                'title': '参会指南新增',
-                'buttons': [
-                    {
-                        caption: '保存', claName: 'primary', callback: function () {
-                            $scope.addMeetingNotes();
-                        }
-                    },
-                    {
-                        caption: '返回', claName: 'default', callback: function () {
-                        }
-                    }
-                ]
+                'title': '参会指南新增'
 
             });
         })
@@ -843,18 +791,7 @@
                 'type': false,
                 'overlay_close': false,
                 'overlay_opacity': 0.75,
-                'title': '会议日程新增',
-                'buttons': [
-                    {
-                        caption: '保存', claName: 'primary', callback: function () {
-                            $scope.addMeetingShedule();
-                        }
-                    },
-                    {
-                        caption: '返回', claName: 'default', callback: function () {
-                        }
-                    }
-                ]
+                'title': '会议日程新增'
             });
         })
         $("#select_d6_add").bind("click", function (e) {

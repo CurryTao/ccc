@@ -1,6 +1,7 @@
 package com.meeting.m2.pojo;
 
 public class MeetingNotes {
+
     private Long id;
 
     private Long mid;

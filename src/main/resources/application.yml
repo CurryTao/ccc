@@ -10,6 +10,8 @@ mybatis:
 spring:
   application:
     name: mangerOfCmeetingsSystem
+  jackson:
+    date-format: 'yyyy-MM-dd HH:mm:ss'
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
@@ -41,5 +43,4 @@ fdfs:
   thumbImage:
     width: 150
     height: 150
-  trackerList:
-    -192.168.9.133:22122
+  trackerList: 192.168.9.133:22122

@@ -57,6 +57,7 @@ public class FastDFSClientWrapper {
     private String getResAccessUrl(StorePath storePath) {
         String fileUrl = "http://" + fdfsConfig.getResHost()
                 + ":" + fdfsConfig.getStoragePort() + "/" + storePath.getFullPath();
+        System.out.println(fileUrl);
         return fileUrl;
     }
 

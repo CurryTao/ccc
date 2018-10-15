@@ -13,10 +13,12 @@
         <result column="creatby" property="creatby" jdbcType="VARCHAR"/>
         <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
         <result column="updateby" property="updateby" jdbcType="VARCHAR"/>
+        <result column="sheduletemplatename" property="sheduletemplatename" jdbcType="VARCHAR"/>
+        <result column="sheduletemplateurl" property="sheduletemplateurl" jdbcType="VARCHAR"/>
     </resultMap>
     <sql id="Base_Column_List">
     id, mid, lssues, speaker, starttime, endtime, content, createtime, creatby, updatetime, 
-    updateby
+    updateby, sheduletemplatename, sheduletemplateurl
   </sql>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
         select

@@ -12,10 +12,10 @@ app.controller("meetingController", function ($scope, $controller, meetingServic
                 $scope.entityList = resp.rows;
                 $scope.myPage.totalItems = resp.total;
             });
-        addressService.findCitieAll().success(
+        addressService.findAreasAll().success(
             function (resp) {
                 for (var i = 0; i < resp.length; i++) {
-                    $scope.addressList[resp[i].cityid] = resp[i].city;
+                    $scope.addressList[resp[i].areaid] = resp[i].area;
                 }
             });
     };
@@ -66,14 +66,12 @@ app.controller("meetingController", function ($scope, $controller, meetingServic
     };
 
     //会议添加方法
-    $scope.chargepersonTelFixed1 = '';
-    $scope.chargepersonTelFixed2 = '';
     $scope.addMeeting = function () {
-        $scope.meeting.chargepersonTelFixed = $scope.chargepersonTelFixed1 + '-' + $scope.chargepersonTelFixed2;
+        console.info($scope.meeting.chargepersonTelFixed);
         meetingService.addMeeting($scope.meeting).success(function (resp) {
             if (resp.status) {
                 alert('会议添加成功');
-                $scope.reload();
+                window.location.href = "会议管理.html";
             } else {
                 alert(resp.msg);
             }
@@ -132,14 +130,33 @@ app.controller("meetingController", function ($scope, $controller, meetingServic
         });
     };
 
-    //会议日程模板下载
-    $scope.templateDowload = function () {
-
+    //会议宣传图上传
+    $scope.uploadMeeingPoster = function () {
+        uploadService.uploadMeeingPoster().success(function (resp) {
+            if (resp.status) {
+                console.info(resp.data);
+                $scope.meeting.poster = resp.data;
+            } else {
+                alert(resp.msg);
+            }
+        });
     };
 
     //会议日程导入
     $scope.templateImport = function () {
-
+        console.info("会议日程导入");
+        if ($scope.sellectMeetingId == '') {
+            alert("请选择会议");
+        } else {
+            uploadService.uploadMeeingShedule($scope.sellectMeetingId).success(function (resp) {
+                if (resp.status) {
+                    alert("导入成功");
+                    window.location.reload();
+                } else {
+                    alert(resp.msg);
+                }
+            });
+        }
     };
 
     //点击显示回显会议
