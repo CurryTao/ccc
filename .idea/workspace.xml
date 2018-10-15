@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a21efb19-cdf9-4ceb-a44b-5c6d55333534" name="Default Changelist" comment="">
+    <list default="true" id="a21efb19-cdf9-4ceb-a44b-5c6d55333534" name="Default Changelist" comment="会议管理系统">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/MeetingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/MeetingApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/config/DateConverterConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/config/DateConverterConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/controller/MeetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/controller/MeetingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/pojo/MeetingNotes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/pojo/MeetingNotes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -110,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="9" />
+            <state relative-caret-position="95">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#338#339#0" expanded="true" />
@@ -383,7 +375,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539602932251" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539603324244" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -516,7 +508,7 @@
       <workItem from="1539580314452" duration="1241000" />
       <workItem from="1539581645751" duration="9082000" />
       <workItem from="1539599479929" duration="25000" />
-      <workItem from="1539599564190" duration="3310000" />
+      <workItem from="1539599564190" duration="3592000" />
     </task>
     <task id="LOCAL-00001" summary="会议管理系统">
       <created>1539526303425</created>
@@ -567,11 +559,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539601328390</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="会议管理系统">
+      <created>1539603065317</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1539603065317</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103562000" />
+    <option name="totallyTimeSpent" value="103844000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1016,8 +1015,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="9" />
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#338#339#0" expanded="true" />
