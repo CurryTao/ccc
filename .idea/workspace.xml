@@ -2,50 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a21efb19-cdf9-4ceb-a44b-5c6d55333534" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/adg-api-server/all-logger.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/config/DateConverterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/config/FdfsConfication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/MeetingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/config/FdfsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/config/FdfsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/controller/MeetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/controller/MeetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/pojo/MeetingNotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/pojo/MeetingNotes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/pojo/vo/Meetings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/service/impl/MeetingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/service/impl/MeetingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/util/FastDFSClientWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meeting/m2/util/FastDFSClientWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meeting/m2/util/FileDownOrUpload.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MeetingMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MeetingMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MeetingNotesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MeetingNotesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MeetingSheduleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MeetingSheduleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsLibrary/js/controller/meetingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsLibrary/js/controller/meetingController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsLibrary/js/service/uploadService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsLibrary/js/service/uploadService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/会议管理_新增.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/会议管理_新增.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/会议配置.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/会议配置.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/MeetingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/MeetingApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/config/FdfsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/config/FdfsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/controller/MeetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/controller/MeetingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/controller/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/pojo/vo/Meetings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/service/impl/MeetingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/service/impl/MeetingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/util/DataGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/util/DataGrid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/util/FastDFSClientWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/util/FastDFSClientWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/util/FileDownOrUpload.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meeting/m2/util/PageResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meeting/m2/util/PageResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/AreasMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/AreasMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/CitiesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/CitiesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/MeetingMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/MeetingMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/MeetingNotesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/MeetingNotesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/MeetingSheduleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/MeetingSheduleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/ProvincesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/ProvincesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mybatis.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -172,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/会议配置.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="598" column="14" selection-start-line="598" selection-start-column="14" selection-end-line="598" selection-end-column="14" />
+            <state relative-caret-position="367">
+              <caret line="601" column="14" selection-start-line="601" selection-start-column="14" selection-end-line="601" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -417,7 +374,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539599666779" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539600210910" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -550,7 +507,7 @@
       <workItem from="1539580314452" duration="1241000" />
       <workItem from="1539581645751" duration="9082000" />
       <workItem from="1539599479929" duration="25000" />
-      <workItem from="1539599564190" duration="306000" />
+      <workItem from="1539599564190" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="会议管理系统">
       <created>1539526303425</created>
@@ -580,11 +537,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539564425309</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="会议管理系统">
+      <created>1539599929453</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1539599929453</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100558000" />
+    <option name="totallyTimeSpent" value="100850000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1027,8 +991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/会议配置.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="598" column="14" selection-start-line="598" selection-start-column="14" selection-end-line="598" selection-end-column="14" />
+        <state relative-caret-position="367">
+          <caret line="601" column="14" selection-start-line="601" selection-start-column="14" selection-end-line="601" selection-end-column="14" />
         </state>
       </provider>
     </entry>
