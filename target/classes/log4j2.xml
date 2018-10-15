@@ -6,11 +6,14 @@
     </Properties>
     <Appenders>
         <Console name="to-console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%highlight{[%d{yyyy-MM-dd HH:mm:ss.SSS}] - [%p] - [%c:%L] - [Method = %M] - [%m]}%n"/>
+            <PatternLayout
+                    pattern="%highlight{[%d{yyyy-MM-dd HH:mm:ss.SSS}] - [%p] - [%c:%L] - [Method = %M] - [%m]}%n"/>
         </Console>
 
-        <RollingFile name="${all-logger}" fileName="${basedir}/${all-logger}.log" append="true" filePattern="${basedir}/$${date:yyyy-MM}/${all-logger}-%d{yyyy-MM-dd}-%i.log.gz">
-            <PatternLayout pattern="%highlight{[%d{yyyy-MM-dd HH:mm:ss.SSS}] - [%p] - [%c:%L] - [Method = %M] - [%m]}%n"/>
+        <RollingFile name="${all-logger}" fileName="${basedir}/${all-logger}.log" append="true"
+                     filePattern="${basedir}/$${date:yyyy-MM}/${all-logger}-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout
+                    pattern="%highlight{[%d{yyyy-MM-dd HH:mm:ss.SSS}] - [%p] - [%c:%L] - [Method = %M] - [%m]}%n"/>
             <Policies>
                 <OnStartupTriggeringPolicy/>
                 <SizeBasedTriggeringPolicy size="50 MB"/>

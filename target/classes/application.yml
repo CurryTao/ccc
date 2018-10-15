@@ -1,6 +1,8 @@
 server:
   port: 8888
 
+debug: true
+
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml  #mybatis所在路径
   type-aliases-package: com.meeting.m2.pojo #entity别名类
