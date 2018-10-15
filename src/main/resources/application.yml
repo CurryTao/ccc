@@ -1,0 +1,45 @@
+server:
+  port: 8888
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml  #mybatis所在路径
+  type-aliases-package: com.meeting.m2.pojo #entity别名类
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml #mapper映射文件
+
+spring:
+  application:
+    name: mangerOfCmeetingsSystem
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/mangerofmeeting
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+logging:
+  level:
+    com:
+      debug
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+fdfs:
+  soTimeout: 1500
+  connectTimeout: 600
+  resHost: 192.168.9.133
+  storagePort: 80
+  thumbImage:
+    width: 150
+    height: 150
+  trackerList:
+    -192.168.9.133:22122

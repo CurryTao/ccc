@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.meeting.m2.dao.MeetingMapper">
+    <resultMap id="BaseResultMap" type="com.meeting.m2.pojo.Meeting">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="starttime" property="starttime" jdbcType="TIMESTAMP"/>
+        <result column="endtime" property="endtime" jdbcType="TIMESTAMP"/>
+        <result column="areasid" property="areasid" jdbcType="BIGINT"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="num" property="num" jdbcType="INTEGER"/>
+        <result column="chargeperson" property="chargeperson" jdbcType="VARCHAR"/>
+        <result column="chargeperson_tel_fixed" property="chargepersonTelFixed" jdbcType="VARCHAR"/>
+        <result column="chargeperson_tel_mobile" property="chargepersonTelMobile" jdbcType="VARCHAR"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="poster" property="poster" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="creattime" property="creattime" jdbcType="TIMESTAMP"/>
+        <result column="creatby" property="creatby" jdbcType="VARCHAR"/>
+        <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
+        <result column="updateby" property="updateby" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, name, starttime, endtime, areasid, address, num, chargeperson, chargeperson_tel_fixed, 
+    chargeperson_tel_mobile, content, poster, status, creattime, creatby, updatetime, 
+    updateby
+  </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_meetings
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="getMeetingList" resultMap="BaseResultMap" parameterType="com.meeting.m2.pojo.Meeting">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_meetings
+        <where>
+            status in (1,2,3)
+            <if test="starttime != null and starttime != ''">
+                and starttime &lt; #{starttime}
+            </if>
+            <if test="endtime != null and endtime != ''">
+                AND endtime &gt; #{endtime}
+            </if>
+            <if test="status != null and status != ''">
+                AND status = #{status}
+            </if>
+            <if test="id!=null and ''!=id ">
+                AND id=#{id}
+            </if>
+            <if test="name!= null and ''!=name ">
+                AND name LIKE concat("%",#{name},"%")
+            </if>
+            order by starttime DESC
+        </where>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tb_meetings
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.meeting.m2.pojo.Meeting">
+    insert into tb_meetings (id, name, starttime, 
+      endtime, areasid, address, 
+      num, chargeperson, chargeperson_tel_fixed, 
+      chargeperson_tel_mobile, content, poster, 
+      status, creattime, creatby, 
+      updatetime, updateby)
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{starttime,jdbcType=TIMESTAMP}, 
+      #{endtime,jdbcType=TIMESTAMP}, #{areasid,jdbcType=BIGINT}, #{address,jdbcType=VARCHAR}, 
+      #{num,jdbcType=INTEGER}, #{chargeperson,jdbcType=VARCHAR}, #{chargepersonTelFixed,jdbcType=VARCHAR}, 
+      #{chargepersonTelMobile,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{poster,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{creattime,jdbcType=TIMESTAMP}, #{creatby,jdbcType=VARCHAR}, 
+      #{updatetime,jdbcType=TIMESTAMP}, #{updateby,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" parameterType="com.meeting.m2.pojo.Meeting">
+        insert into tb_meetings
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="starttime != null">
+                starttime,
+            </if>
+            <if test="endtime != null">
+                endtime,
+            </if>
+            <if test="areasid != null">
+                areasid,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="num != null">
+                num,
+            </if>
+            <if test="chargeperson != null">
+                chargeperson,
+            </if>
+            <if test="chargepersonTelFixed != null">
+                chargeperson_tel_fixed,
+            </if>
+            <if test="chargepersonTelMobile != null">
+                chargeperson_tel_mobile,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="poster != null">
+                poster,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="creattime != null">
+                creattime,
+            </if>
+            <if test="creatby != null">
+                creatby,
+            </if>
+            <if test="updatetime != null">
+                updatetime,
+            </if>
+            <if test="updateby != null">
+                updateby,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="starttime != null">
+                #{starttime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endtime != null">
+                #{endtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="areasid != null">
+                #{areasid,jdbcType=BIGINT},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                #{num,jdbcType=INTEGER},
+            </if>
+            <if test="chargeperson != null">
+                #{chargeperson,jdbcType=VARCHAR},
+            </if>
+            <if test="chargepersonTelFixed != null">
+                #{chargepersonTelFixed,jdbcType=VARCHAR},
+            </if>
+            <if test="chargepersonTelMobile != null">
+                #{chargepersonTelMobile,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="poster != null">
+                #{poster,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="creattime != null">
+                #{creattime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creatby != null">
+                #{creatby,jdbcType=VARCHAR},
+            </if>
+            <if test="updatetime != null">
+                #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateby != null">
+                #{updateby,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.meeting.m2.pojo.Meeting">
+        update tb_meetings
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="starttime != null">
+                starttime = #{starttime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endtime != null">
+                endtime = #{endtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="areasid != null">
+                areasid = #{areasid,jdbcType=BIGINT},
+            </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                num = #{num,jdbcType=INTEGER},
+            </if>
+            <if test="chargeperson != null">
+                chargeperson = #{chargeperson,jdbcType=VARCHAR},
+            </if>
+            <if test="chargepersonTelFixed != null">
+                chargeperson_tel_fixed = #{chargepersonTelFixed,jdbcType=VARCHAR},
+            </if>
+            <if test="chargepersonTelMobile != null">
+                chargeperson_tel_mobile = #{chargepersonTelMobile,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="poster != null">
+                poster = #{poster,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="creattime != null">
+                creattime = #{creattime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creatby != null">
+                creatby = #{creatby,jdbcType=VARCHAR},
+            </if>
+            <if test="updatetime != null">
+                updatetime = #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateby != null">
+                updateby = #{updateby,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.meeting.m2.pojo.Meeting">
+    update tb_meetings
+    set name = #{name,jdbcType=VARCHAR},
+      starttime = #{starttime,jdbcType=TIMESTAMP},
+      endtime = #{endtime,jdbcType=TIMESTAMP},
+      areasid = #{areasid,jdbcType=BIGINT},
+      address = #{address,jdbcType=VARCHAR},
+      num = #{num,jdbcType=INTEGER},
+      chargeperson = #{chargeperson,jdbcType=VARCHAR},
+      chargeperson_tel_fixed = #{chargepersonTelFixed,jdbcType=VARCHAR},
+      chargeperson_tel_mobile = #{chargepersonTelMobile,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      poster = #{poster,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      creattime = #{creattime,jdbcType=TIMESTAMP},
+      creatby = #{creatby,jdbcType=VARCHAR},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      updateby = #{updateby,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
