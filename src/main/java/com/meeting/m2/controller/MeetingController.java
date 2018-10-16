@@ -74,7 +74,7 @@ public class MeetingController {
     }
 
     @RequestMapping("/addMeetingShedule")
-    public void addMeetingShedule(MeetingShedule meetingShedule, HttpServletResponse response) {
+    public void addMeetingShedule(MeetingShedule meetingShedule) {
         try {
             meetingService.addMeetingShedule(meetingShedule);
         } catch (Exception e) {
