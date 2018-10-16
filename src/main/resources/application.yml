@@ -40,9 +40,9 @@ pagehelper:
 fdfs:
   soTimeout: 1500
   connectTimeout: 600
-  resHost: 192.168.9.133
+  resHost: 192.168.67.133
   storagePort: 80
   thumbImage:
     width: 150
     height: 150
-  trackerList: 192.168.9.133:22122
+  trackerList: 192.168.67.133:22122

@@ -65,10 +65,9 @@ public class MeetingController {
             if (file != null && !file.isEmpty()) {
                 String notesFileUrl = fastDFSClientWrapper.uploadFile(file);
                 meetingNotes.setNotesfileurl(notesFileUrl);
-                meetingNotes.setNotesfilename(file.getName());
+                meetingNotes.setNotesfilename(file.getOriginalFilename());
             }
             meetingService.addMeetingNotes(meetingNotes);
-            response.sendRedirect("../pages/会议配置.html");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -78,7 +77,6 @@ public class MeetingController {
     public void addMeetingShedule(MeetingShedule meetingShedule, HttpServletResponse response) {
         try {
             meetingService.addMeetingShedule(meetingShedule);
-            response.sendRedirect("../pages/会议配置.html");
         } catch (Exception e) {
             e.printStackTrace();
         }
